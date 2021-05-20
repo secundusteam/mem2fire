@@ -3,7 +3,7 @@ import 'package:mem2fire/services/shared_preferences_service.dart';
 //import 'package:state_notifier/state_notifier.dart';
 
 final onboardingViewModelProvider =
-    StateNotifierProvider<OnboardingViewModel>((ref) {
+    StateNotifierProvider<OnboardingViewModel, bool>((ref) {
   final sharedPreferencesService = ref.watch(sharedPreferencesServiceProvider);
   return OnboardingViewModel(sharedPreferencesService);
 });

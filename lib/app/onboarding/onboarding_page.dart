@@ -5,7 +5,8 @@ import 'package:mem2fire/app/onboarding/onboarding_view_model.dart';
 
 class OnboardingPage extends StatelessWidget {
   Future<void> onGetStarted(BuildContext context) async {
-    final onboardingViewModel = context.read(onboardingViewModelProvider);
+    final onboardingViewModel =
+        context.read(onboardingViewModelProvider.notifier);
     await onboardingViewModel.completeOnboarding();
   }
 
